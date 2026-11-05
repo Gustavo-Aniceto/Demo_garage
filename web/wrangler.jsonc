@@ -1,0 +1,10 @@
+{
+  // Site estático (Vite) servido pela Cloudflare. Um projeto por oficina: troque só o "name".
+  "name": "oficina-modelo-demo",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist",
+    // SPA: qualquer rota desconhecida devolve index.html (o React Router resolve).
+    "not_found_handling": "single-page-application"
+  }
+}

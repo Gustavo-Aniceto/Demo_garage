@@ -1,0 +1,13 @@
+{
+  "name": "oficina-modelo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "provision:master": "node scripts/provision-master.mjs",
+    "recover:master": "node scripts/provision-master.mjs --reset",
+    "backup:fotos": "node scripts/backup-fotos.mjs"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0"
+  }
+}

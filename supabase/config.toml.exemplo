@@ -1,0 +1,16 @@
+# Trechos OBRIGATÓRIOS para o supabase/config.toml (gerado por `supabase init`)
+[auth]
+site_url = "https://SEU-DOMINIO"
+enable_signup = false          # ninguém cria conta sozinho — só o MasterAdm, via admin-users
+minimum_password_length = 10
+password_requirements = "lower_upper_letters_digits_symbols"
+
+[auth.email]
+enable_signup = false
+enable_confirmations = false   # logins internos usam e-mail técnico, sem caixa de entrada
+
+[functions.admin-users]
+verify_jwt = true
+
+[functions.change-password]
+verify_jwt = true
