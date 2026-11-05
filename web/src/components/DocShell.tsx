@@ -5,8 +5,11 @@ import { formatDateTime } from "../lib/format";
 import { OFICINA } from "../lib/oficina";
 import type { PhotoCategory, VehiclePhoto } from "../lib/types";
 
+const NO_PHOTOS: VehiclePhoto[] = [];
+const NO_CATEGORIES: PhotoCategory[] = [];
+
 /** Moldura de documento: cabeçalho da oficina, barra de ações (some na impressão) e seleção de fotos. */
-export function DocShell({ title, number, children, photos = [], categories = [], defaultSelected }: {
+export function DocShell({ title, number, children, photos = NO_PHOTOS, categories = NO_CATEGORIES, defaultSelected }: {
   title: string; number?: string; children: ReactNode; photos?: VehiclePhoto[]; categories?: PhotoCategory[];
   defaultSelected?: (p: VehiclePhoto) => boolean;
 }) {
