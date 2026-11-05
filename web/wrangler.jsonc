@@ -1,6 +1,6 @@
 {
   // Site estático (Vite) servido pela Cloudflare. Um projeto por oficina: troque só o "name".
-  "name": "oficina-modelo-demo",
+  "name": "demo-garage",
   "compatibility_date": "2026-11-01",
   "assets": {
     "directory": "./dist",
