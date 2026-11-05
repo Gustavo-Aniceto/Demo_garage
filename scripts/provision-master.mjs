@@ -43,7 +43,6 @@ const pw1 = await askHidden(`Senha ${RESET ? "temporária de recuperação" : "i
 const pw2 = await askHidden("Confirme a senha: ");
 if (pw1 !== pw2) { console.error("As senhas não conferem."); process.exit(1); }
 const p = problems(pw1);
-// A senha inicial definida no projeto (SenhaDemo#2026) tem 10 caracteres e atende à política.
 if (p) { console.error(`Senha fraca: ${p}.`); process.exit(1); }
 
 const { data: existing } = await db.from("profiles").select("id, login").eq("role", "master").maybeSingle();
