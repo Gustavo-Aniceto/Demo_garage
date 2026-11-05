@@ -22,5 +22,13 @@ Aplicar as migrações em ordem e publicar as duas Edge Functions. Segredos e se
 ficam neste repositório; o MasterAdm é criado com `npm run provision:master`
 (a senha é digitada no terminal).
 
+## Primeira configuração do Supabase da demo (sem CLI)
+1. SQL Editor: colar e executar `supabase/aplicar-tudo.sql` (as 7 migrações, em ordem).
+2. Edge Functions: publicar `admin-users` e `change-password` (pasta `supabase/functions`), com
+   `LOGIN_EMAIL_DOMAIN=usuarios.oficinamodelo.internal` e `APP_ALLOWED_ORIGINS` com o endereço do site.
+3. Criar o MasterAdm: `npm run provision:master` (a senha é digitada no terminal, nunca gravada).
+4. Cloudflare: cadastrar `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` e `VITE_LOGIN_EMAIL_DOMAIN`
+   e refazer o deploy.
+
 ## Pendências
 Seed/reset de dados fictícios, passo a passo de nova oficina e script de atualização em lote.
